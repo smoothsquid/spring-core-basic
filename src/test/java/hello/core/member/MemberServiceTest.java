@@ -2,7 +2,6 @@ package hello.core.member;
 
 
 import hello.core.AppConfig;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
