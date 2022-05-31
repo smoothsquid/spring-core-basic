@@ -17,11 +17,12 @@ class StatefulServiceTest {
             StatefulService statefulService1 = ac.getBean(StatefulService.class);
             StatefulService statefulService2 = ac.getBean(StatefulService.class);
 
-            statefulService1.order("orderA", 10000);
-            statefulService2.order("orderB", 20000);
+            int price1 = statefulService1.order("orderA", 10000);
+            int price2 = statefulService2.order("orderB", 20000);
 
             // statefulService1 의 price 필드가 10000이 아니게 됨
-            assertThat(statefulService1.getPrice()).isNotEqualTo(10000);
+            assertThat(price1).isEqualTo(10000);
+            assertThat(price2).isEqualTo(20000);
         }
     }
 
